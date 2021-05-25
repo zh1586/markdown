@@ -6,11 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Markdown Editer</title>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <style>
+        .notebook,.input,.preview {
+            position: absolute;
+            top: 0%;
+        }
+        .notebook {
+            /* border: 1px solid rebeccapurple; */
+            width: 300px;
+            height: 500px;
+            background: #FCC;
+            /* position: absolute; */
+            left: 0;
+            /* top: 0; */
+        }
+        .input {
+            /* border: 1px solid rebeccapurple; */
+            width: 900px;
+            height: 500px;
+            background: #999;
+            /* position: absolute; */
+            left: 300px;
+            /* top: 0; */
+        }
+        .preview {
+            /* border: 1px solid rebeccapurple; */
+            width: 300px;
+            height: 500px;
+            background: #3fc;
+            /* position: absolute; */
+            right: 0;
+            /* top: 0; */
+        }
+    </style>
 </head>
 <body>
-    <h1>test</h1>
     <div id="notebook">
-
+        <div class="notebook">notebook</div>
+        <div class="input">input</div>
+        <div class="preview">preview</div>
     </div>
     <script>
         var vm = new Vue({
