@@ -7,37 +7,37 @@
     <title>Markdown Editer</title>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <style>
+        #notebook {
+            display: flex;
+            margin: 0px;
+        }
         .notebook,.input,.preview {
             /* position: absolute; */
             /* top: 0%; */
-            margin: 0%;
+            /* margin: 0; */
+            height: 1000px;
+            /* float: left; */
         }
         .notebook {
             /* border: 1px solid rebeccapurple; */
-            width: 300px;
-            height: 500px;
+            width: 30%;
             background: #FCC;
-            float: left;
             /* position: absolute; */
             /* left: 0; */
             /* top: 0; */
         }
         .input {
             /* border: 1px solid rebeccapurple; */
-            width: 800px;
-            height: 500px;
+            width: 40%;
             background: #999;
-            float: left;
             /* position: absolute; */
             /* left: 300px; */
             /* top: 0; */
         }
         .preview {
             /* border: 1px solid rebeccapurple; */
-            width: 300px;
-            height: 500px;
+            width: 30%;
             background: #3fc;
-            float: left;
             /* position: absolute; */
             /* right: 0; */
             /* top: 0; */
