@@ -74,7 +74,7 @@
             el: '#notebook',
             data: {
                 content: '',
-                notes:[],
+                notes:JSON.parse(localStorage.getItem('notes')) || [],
                 selectedId:null,
             },
             computed:{
@@ -94,6 +94,10 @@
             created(){
                 this.content=localStorage.getItem('content')
             },
+            watch:{
+                notes:"saveNotes",
+                deep:true
+            },
             methods:{
                 addNote(){
                     console.log('add note is called')
@@ -112,6 +116,10 @@
                 selectNote(note){
                     this.selectedId=note.id,
                     console.log("select note id : ",this.selectedId)
+                },
+                 saveNotes(){
+                    localStorage.setItem('notes',JSON.stringify(this.notes)),
+                    console.log('Notes saved!',new Date())
                 }
             } 
         })
